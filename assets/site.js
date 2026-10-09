@@ -1,4 +1,50 @@
 (() => {
+  const styles = ['academic', 'discovery', 'editorial'];
+  const styleTabs = [...document.querySelectorAll('[data-style][role="tab"]')];
+  const applyStyle = (style, updateUrl = false) => {
+    if (!styles.includes(style)) style = 'academic';
+    document.documentElement.dataset.style = style;
+    styleTabs.forEach(tab => {
+      const selected = tab.dataset.style === style;
+      tab.setAttribute('aria-selected', String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    document.querySelector('#main')?.setAttribute('aria-labelledby', `style-${style}`);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', {
+      academic: '#f7f6f2', discovery: '#101d2a', editorial: '#ffffff'
+    }[style]);
+    try { localStorage.setItem('tang-lab-style', style); } catch (_) {}
+    if (updateUrl) {
+      const url = new URL(location.href);
+      url.searchParams.set('style', style);
+      history.replaceState(null, '', url);
+    }
+    document.querySelectorAll('a[href]').forEach(link => {
+      const url = new URL(link.href, location.href);
+      if (url.origin !== location.origin) return;
+      url.searchParams.set('style', style);
+      link.href = url.href;
+    });
+  };
+  applyStyle(document.documentElement.dataset.style);
+  styleTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => applyStyle(tab.dataset.style, true));
+    tab.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % styleTabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + styleTabs.length) % styleTabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = styleTabs.length - 1;
+      if (next === undefined) return;
+      event.preventDefault();
+      styleTabs[next].focus();
+      applyStyle(styleTabs[next].dataset.style, true);
+    });
+  });
+  window.addEventListener('popstate', () => {
+    applyStyle(new URLSearchParams(location.search).get('style') || 'academic');
+  });
+
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#site-nav');
   const closeMenu = () => {

@@ -19,6 +19,12 @@ ARROW = '<span aria-hidden="true">↗</span>'
 LOGO = '''<svg viewBox="0 0 36 40" fill="none" aria-hidden="true"><path d="M18 38V22C18 13 9 14 9 4M18 23C18 13 28 15 28 2M18 30C18 24 31 29 32 19M18 28C18 21 4 27 3 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>'''
 
 
+def style_switcher():
+    choices = [('academic', 'Academic'), ('discovery', 'Discovery'), ('editorial', 'Editorial')]
+    tabs = ''.join(f'<button type="button" role="tab" id="style-{key}" aria-controls="main" aria-selected="{str(i == 0).lower()}" tabindex="{0 if i == 0 else -1}" data-style="{key}"><span class="style-number">0{i+1}</span>{label}</button>' for i, (key, label) in enumerate(choices))
+    return f'<div class="style-switcher"><div class="container style-switcher-inner"><span class="style-switcher-label">EXPLORE THE DESIGNS</span><div role="tablist" aria-label="Website design">{tabs}</div><span class="style-switcher-note">Same science. Different perspectives.</span></div></div>'
+
+
 def header(active):
     links = [("index.html", "Home"), ("research.html", "Research"), ("people.html", "People"), ("publications.html", "Publications")]
     nav = ''.join(f'<a href="{url}"{chr(32) + "aria-current=\"page\"" if url == active else ""}>{label}</a>' for url, label in links)
@@ -41,10 +47,11 @@ def footer():
 
 def shell(filename, title, description, content):
     document = f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" data-style="academic"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{{var s=new URLSearchParams(location.search).get('style')||localStorage.getItem('tang-lab-style');if(['academic','discovery','editorial'].includes(s))document.documentElement.dataset.style=s;}}catch(e){{}}</script>
 <title>{esc(title)} | Tang Vascular Research Lab</title><meta name="description" content="{esc(description)}"><meta name="theme-color" content="#f7f6f2">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/site.css"><script src="assets/site.js" defer></script>
-</head><body id="top">{header(filename)}<main id="main">{content}</main>{footer()}</body></html>'''
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/styles.css"><script src="assets/site.js" defer></script>
+</head><body id="top">{style_switcher()}{header(filename)}<main id="main" role="tabpanel" aria-labelledby="style-academic">{content}</main>{footer()}</body></html>'''
     (OUT / filename).write_text(document)
 
 

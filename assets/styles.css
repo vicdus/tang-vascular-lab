@@ -1,0 +1,217 @@
+/* Shared design selector; all variants render the same research content. */
+:root{--switcher-height:48px}
+html{scroll-padding-top:calc(108px + var(--switcher-height))}
+.style-switcher{position:sticky;top:0;z-index:12;background:#e9e9e2;color:#34433b;border-bottom:1px solid #d3d6cc;min-height:var(--switcher-height);font-family:var(--sans)}
+.style-switcher-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:var(--switcher-height)}
+.style-switcher-label{font-size:8px;font-weight:650;letter-spacing:1.6px;white-space:nowrap}
+.style-switcher [role=tablist]{display:flex;align-self:stretch;gap:5px}
+.style-switcher [role=tab]{border:0;border-bottom:2px solid transparent;background:transparent;color:#5a645c;padding:12px 18px 10px;font-size:11px;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.style-switcher [role=tab]:hover{background:#dde1d6;color:#253b34}
+.style-switcher [role=tab][aria-selected=true]{color:#253b34;background:#f7f6f2;border-bottom-color:#8f414d;font-weight:650}
+.style-number{font-size:8px;opacity:.6;font-variant-numeric:tabular-nums}
+.style-switcher-note{font-size:9px;color:#71806f}
+.site-header{top:var(--switcher-height)}
+.research-detail-art{top:calc(145px + var(--switcher-height))}
+.skip-link:focus{top:calc(var(--switcher-height) + 16px)}
+
+/* 02 — Discovery. A dark, contemporary research identity. */
+html[data-style=discovery]{--paper:#101d2a;--white:#172838;--ink:#edf5f2;--muted:#aabfcb;--red:#8ddbc7;--red-dark:#b1f3df;--line:#344958;--green:#203745;--serif:var(--sans);color-scheme:dark}
+[data-style=discovery] body{background:var(--paper)}
+[data-style=discovery] .site-header{background:#101d2af5;border-color:var(--line)}
+[data-style=discovery] .brand strong{font-family:var(--sans);font-weight:700;letter-spacing:-1.5px}
+[data-style=discovery] .brand small{color:#aabfcb}
+[data-style=discovery] #site-nav .nav-contact{border-color:#526a79;border-radius:6px}
+[data-style=discovery] h1,[data-style=discovery] h2,[data-style=discovery] h3{font-family:var(--sans);font-weight:650;letter-spacing:-1.7px}
+[data-style=discovery] em{font-style:normal;color:#8ddbc7}
+[data-style=discovery] .hero{background:radial-gradient(ellipse at 80% 60%,#1c3d46 0,transparent 55%),linear-gradient(120deg,#101d2a,#122635);position:relative}
+[data-style=discovery] .hero-grid{padding-top:65px;padding-bottom:55px;gap:36px;grid-template-columns:1.12fr 1fr}
+[data-style=discovery] .hero h1{font-size:clamp(50px,4.8vw,69px);font-weight:650;letter-spacing:-3.2px;line-height:1.07}
+[data-style=discovery] .hero-description{color:#b4c6d2;font-size:15px}
+[data-style=discovery] .hero-art{background:#162e3a80;border:1px solid #456473;border-radius:220px 220px 20px 20px;padding:25px 16px 20px;box-shadow:0 0 80px #67d9bc08}
+[data-style=discovery] .figure-top{justify-content:center;color:#a2cec5;font-size:7px;letter-spacing:1.5px;padding:0}
+[data-style=discovery] .figure-cross{display:none}
+[data-style=discovery] .vessel-art{filter:brightness(1.65) hue-rotate(125deg) saturate(.7)}
+[data-style=discovery] .hero-art figcaption{color:#a9c5ce;font-size:6px;letter-spacing:.8px;padding:0}
+[data-style=discovery] .button{background:#8ddbc7;color:#102b31;border-color:#8ddbc7;border-radius:6px;font-weight:650}
+[data-style=discovery] .button:hover{background:#b1f3df}
+[data-style=discovery] .understated-link{color:#dfedee}
+[data-style=discovery] .affiliation-strip{background:#142633;border-color:#344958}
+[data-style=discovery] .affiliation-strip p,[data-style=discovery] .affiliation-strip small{color:#9db8c6}
+[data-style=discovery] .affiliation-strip .container>span:not(.affiliation-divider){font-family:var(--sans);font-size:17px;font-weight:600}
+[data-style=discovery] .affiliation-divider{background:#3a5463}
+[data-style=discovery] .text-link{border-color:#59727b}
+[data-style=discovery] .research-card{border-radius:13px;overflow:hidden;border-color:#344958}
+[data-style=discovery] .research-card:hover{border-color:#8ddbc7;box-shadow:0 15px 45px #0003}
+[data-style=discovery] .research-image{border-color:#344958}
+[data-style=discovery] .research-card h3{font-size:25px;letter-spacing:-1px}
+[data-style=discovery] .research-image>svg,[data-style=discovery] .research-detail-art>svg{filter:brightness(.95) hue-rotate(125deg)}
+[data-style=discovery] .image-0,[data-style=discovery] .image-1,[data-style=discovery] .image-2{background:#233d49}
+[data-style=discovery] .image-index{color:#b5d3d2}
+[data-style=discovery] .art-note,[data-style=discovery] .pub-tags{color:#96aebc}
+[data-style=discovery] .people-feature,[data-style=discovery] .collaborators-section{background:#172e3b;border-color:#344958}
+[data-style=discovery] .people-feature-copy p:not(.eyebrow){color:#b0c3cd}
+[data-style=discovery] .portrait-frame,[data-style=discovery] .pi-portrait{background:#28404e;border:1px solid #486271;border-radius:12px}
+[data-style=discovery] .portrait-frame img{border-radius:7px 7px 0 0;filter:saturate(.55)}
+[data-style=discovery] .portrait-caption,[data-style=discovery] .portrait-caption span{color:#afc8cf}
+[data-style=discovery] .publication h3{font-weight:500;font-size:21px;letter-spacing:-.5px}
+[data-style=discovery] .pub-type{background:#294b53;color:#b5ebda}
+[data-style=discovery] .pub-type.preprint,[data-style=discovery] .inline-badge{background:#473c54;color:#d9bfe9}
+[data-style=discovery] .pub-authors{color:#b2cad2}
+[data-style=discovery] .contact-band{background:#8ddbc7;color:#102b31;border-top:1px solid #b1f3df}
+[data-style=discovery] .contact-band h2,[data-style=discovery] .contact-band .light{color:#102b31}
+[data-style=discovery] .contact-details p,[data-style=discovery] .email-link span{color:#355c5b}
+[data-style=discovery] .email-link{border-color:#558c7e}
+[data-style=discovery] .email-link:hover{color:#244c55}
+[data-style=discovery] .footer-bottom{color:#9eb7c3}
+[data-style=discovery] .person-monogram{background:#254752;color:#a9e3d5;border-color:#49737b;font-family:var(--sans)}
+[data-style=discovery] .collaborator{border-color:#426071}
+[data-style=discovery] .search-label{background:#172838;border-color:#526a79}
+[data-style=discovery] .search-label input::placeholder{color:#9fb6c5}
+[data-style=discovery] .filter-button{border-color:#526a79;color:#b4c8d2;border-radius:20px}
+[data-style=discovery] .filter-button:hover{background:#294552}
+[data-style=discovery] .filter-button.active{background:#8ddbc7;border-color:#8ddbc7;color:#102b31}
+[data-style=discovery] .results-meta{color:#a5bac7}
+[data-style=discovery] .menu-toggle{border-color:#536c7a;border-radius:5px}
+[data-style=discovery] #site-nav{border-color:#344958}
+[data-style=discovery] .research-detail-art{border-radius:12px;overflow:hidden}
+
+/* 03 — Editorial. White space, strong rules and a journal-inspired layout. */
+html[data-style=editorial]{--paper:#fff;--white:#fff;--ink:#252525;--muted:#66635f;--red:#b94b2b;--red-dark:#94361d;--line:#d2cec7;--green:#f2eee8;color-scheme:light}
+[data-style=editorial] .site-header{background:#fffffff5;border-bottom:2px solid #252525}
+[data-style=editorial] .brand>svg{background:#252525;color:#fff;padding:6px;width:40px;height:45px}
+[data-style=editorial] .brand strong{font-size:29px;letter-spacing:-1.5px}
+[data-style=editorial] .brand small{letter-spacing:2.5px;font-size:7px}
+[data-style=editorial] #site-nav .nav-contact{border-color:#252525}
+[data-style=editorial] .hero-grid{grid-template-columns:.85fr 1.15fr;gap:80px;padding-block:57px}
+[data-style=editorial] .hero-art{order:-1;background:#f1eee8;padding:24px;border-top:3px solid #252525;border-bottom:1px solid #bfbab1;align-self:stretch}
+[data-style=editorial] .hero h1{font-size:clamp(53px,4.9vw,71px);font-weight:400;line-height:1.04;letter-spacing:-3px}
+[data-style=editorial] .hero h1 em{display:block;font-style:italic;font-weight:400;white-space:normal}
+[data-style=editorial] .hero-description{font-size:14px;line-height:1.9;max-width:430px}
+[data-style=editorial] .hero-copy{align-self:center;padding-block:16px}
+[data-style=editorial] .hero .eyebrow{font-family:'Courier New',monospace;letter-spacing:1.4px;font-size:9px;max-width:340px;line-height:1.8}
+[data-style=editorial] .hero-footnote{margin-top:27px}
+[data-style=editorial] .figure-top{padding:0;color:#625c54;font-family:'Courier New',monospace;letter-spacing:1px}
+[data-style=editorial] .vessel-art{filter:sepia(.5);max-height:450px}
+[data-style=editorial] .hero-art figcaption{padding:0;color:#625c54}
+[data-style=editorial] .hero-art figcaption span:first-child{display:none}
+[data-style=editorial] .button{background:#252525;border-color:#252525}
+[data-style=editorial] .button:hover{background:#b94b2b;border-color:#b94b2b}
+[data-style=editorial] .affiliation-strip{background:white;border-top:1px solid #252525;border-bottom:1px solid #252525}
+[data-style=editorial] .affiliation-strip p{font-family:'Courier New',monospace;color:#252525}
+[data-style=editorial] .affiliation-strip .container>span:not(.affiliation-divider){font-size:19px}
+[data-style=editorial] .eyebrow{font-family:'Courier New',monospace;letter-spacing:1.7px;font-weight:400}
+[data-style=editorial] .section-heading{border-top:2px solid #252525;padding-top:25px}
+[data-style=editorial] .section-heading h2{font-size:47px;letter-spacing:-1.8px}
+[data-style=editorial] .research-grid{grid-template-columns:1fr;gap:0;border-top:1px solid #252525}
+[data-style=editorial] .research-card{display:grid;grid-template-columns:250px 1fr;border:0;border-bottom:1px solid #252525;padding:27px 0;gap:36px;background:transparent;align-items:center}
+[data-style=editorial] .research-card:hover{transform:none;background:#faf8f4}
+[data-style=editorial] .research-image{height:210px;border:0}
+[data-style=editorial] .research-card-body{padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:32px;align-items:start}
+[data-style=editorial] .research-card-body .eyebrow{grid-column:1/-1;font-size:9px;margin-bottom:17px}
+[data-style=editorial] .research-card h3{font-size:34px;grid-row:2/4;margin-bottom:0;letter-spacing:-1px}
+[data-style=editorial] .research-card p:not(.eyebrow){font-size:12px;margin-bottom:15px;line-height:1.85}
+[data-style=editorial] .research-card .text-link{justify-self:start}
+[data-style=editorial] .image-0,[data-style=editorial] .image-1,[data-style=editorial] .image-2{background:#f1eee8}
+[data-style=editorial] .people-feature{background:#f1eee8;border-block:1px solid #252525}
+[data-style=editorial] .portrait-frame{padding:0;background:transparent}
+[data-style=editorial] .portrait-frame:before{display:none}
+[data-style=editorial] .portrait-frame img{filter:grayscale(1);height:auto}
+[data-style=editorial] .people-feature-grid{grid-template-columns:.75fr 1.25fr}
+[data-style=editorial] .people-feature-copy h2{font-size:48px;letter-spacing:-1.6px}
+[data-style=editorial] .people-feature-copy p:not(.eyebrow){color:#66635f}
+[data-style=editorial] .publication{border-color:#252525}
+[data-style=editorial] .pub-year{font-family:'Courier New',monospace;font-size:17px;padding-top:5px}
+[data-style=editorial] .pub-tags{font-family:'Courier New',monospace}
+[data-style=editorial] .pub-type{background:#f1eee8;color:#62584a}
+[data-style=editorial] .pub-type.preprint{background:#f5e5dd;color:#a04025}
+[data-style=editorial] .contact-band{background:#f1eee8;color:#252525;border-block:2px solid #252525}
+[data-style=editorial] .contact-band h2{color:#252525;font-size:48px}
+[data-style=editorial] .contact-band .light{color:#b94b2b}
+[data-style=editorial] .contact-details p,[data-style=editorial] .email-link span{color:#66635f}
+[data-style=editorial] .email-link{border-color:#252525}
+[data-style=editorial] .email-link:hover{color:#b94b2b}
+[data-style=editorial] .page-intro{border-bottom:2px solid #252525;padding-bottom:45px}
+[data-style=editorial] .page-intro h1{font-size:73px;font-weight:400;letter-spacing:-2.6px}
+[data-style=editorial] .research-detail-art{background:#f1eee8;border-color:#bfbab1}
+[data-style=editorial] .research-detail{border-color:#252525}
+[data-style=editorial] .pi-portrait{padding:0 0 12px;background:transparent;border-bottom:1px solid #252525}
+[data-style=editorial] .pi-portrait img{filter:grayscale(1)}
+[data-style=editorial] .pi-section h2{font-size:54px}
+[data-style=editorial] .collaborators-section{background:#f1eee8;border-block:1px solid #252525}
+[data-style=editorial] .collaborator{border-color:#252525}
+[data-style=editorial] .person-monogram{border-radius:0;background:transparent;border-color:#252525;color:#252525;font-family:var(--serif)}
+[data-style=editorial] .search-label{border-color:#252525}
+[data-style=editorial] .filter-button{border-color:#aaa49b;color:#62584a}
+[data-style=editorial] .filter-button.active{background:#252525;border-color:#252525;color:white}
+
+@media(max-width:1100px){
+  .style-switcher-note{display:none}.style-switcher-inner{justify-content:space-between;gap:15px}
+  [data-style=discovery] .hero-grid{gap:24px}
+  [data-style=discovery] .hero h1{font-size:clamp(42px,4.7vw,60px);letter-spacing:-2.3px}
+  [data-style=editorial] .hero-grid{gap:45px;grid-template-columns:.85fr 1.15fr}
+  [data-style=editorial] .hero h1{font-size:clamp(45px,5vw,60px);letter-spacing:-2px}
+  [data-style=editorial] .hero-art{padding:20px}
+  [data-style=editorial] .research-card{grid-template-columns:200px 1fr;gap:28px}
+  [data-style=editorial] .research-card h3{font-size:29px}
+  [data-style=editorial] .research-card-body{column-gap:25px}
+}
+@media(max-width:850px){
+  [data-style=discovery] #site-nav{background:#101d2a}
+  [data-style=editorial] #site-nav{background:#fff}
+  [data-style=discovery] .hero-grid{grid-template-columns:1fr 1fr;gap:20px}
+  [data-style=discovery] .hero h1{font-size:clamp(35px,5vw,44px);letter-spacing:-2px}
+  [data-style=discovery] .hero-art{padding:22px 8px 15px}
+  [data-style=discovery] .hero-description{font-size:13px}
+  [data-style=discovery] .hero-art figcaption span:first-child{display:none}
+  [data-style=discovery] .hero-art figcaption{justify-content:center}
+  [data-style=editorial] .hero-grid{gap:32px}
+  [data-style=editorial] .hero-art{padding:15px}
+  [data-style=editorial] .hero .eyebrow{font-size:7px;letter-spacing:.8px}
+  [data-style=editorial] .hero h1{font-size:43px;letter-spacing:-1.8px}
+  [data-style=editorial] .hero-description{font-size:12px}
+  [data-style=editorial] .section-heading h2,[data-style=editorial] .people-feature-copy h2,[data-style=editorial] .contact-band h2{font-size:37px}
+  [data-style=editorial] .research-card{grid-template-columns:165px 1fr;gap:25px}
+  [data-style=editorial] .research-image{height:185px}
+  [data-style=editorial] .research-card-body{display:block}
+  [data-style=editorial] .research-card h3{font-size:29px;margin-bottom:15px}
+  [data-style=editorial] .research-card h3 br{display:none}
+  [data-style=editorial] .page-intro h1{font-size:58px}
+  [data-style=editorial] .pi-section h2{font-size:44px}
+}
+@media(max-width:600px){
+  :root{--switcher-height:47px}
+  html{scroll-padding-top:147px}
+  .style-switcher-inner{width:100%;gap:0;justify-content:center}
+  .style-switcher-label{display:none}
+  .style-switcher [role=tablist]{width:100%;justify-content:center;gap:0}
+  .style-switcher [role=tab]{flex:1;justify-content:center;padding:12px 8px 10px;font-size:10px;gap:6px}
+  .style-number{font-size:7px}
+  [data-style=discovery] .hero-grid{display:flex;gap:29px;padding-block:36px 28px}
+  [data-style=discovery] .hero h1{font-size:clamp(34px,9.7vw,48px);letter-spacing:-1.7px;line-height:1.1}
+  [data-style=discovery] .hero h1 em{white-space:normal}
+  [data-style=discovery] .hero-art{padding:24px 12px 15px;max-width:360px;width:100%;border-radius:180px 180px 14px 14px}
+  [data-style=discovery] .vessel-art{height:300px}
+  [data-style=discovery] .affiliation-strip .container>span:not(.affiliation-divider){font-size:13px}
+  [data-style=discovery] .research-card h3{font-size:25px}
+  [data-style=discovery] .publication h3{font-size:18px;letter-spacing:-.4px}
+  [data-style=editorial] .hero-grid{display:flex;gap:25px;padding-block:30px 24px}
+  [data-style=editorial] .hero-art{order:0;padding:14px;max-width:400px;align-self:center}
+  [data-style=editorial] .hero-copy{padding:0}
+  [data-style=editorial] .hero h1{font-size:clamp(45px,12vw,62px);letter-spacing:-2px}
+  [data-style=editorial] .hero h1 em{white-space:normal}
+  [data-style=editorial] .hero .eyebrow{font-size:8px;max-width:none}
+  [data-style=editorial] .hero-description{font-size:13px}
+  [data-style=editorial] .vessel-art{height:260px}
+  [data-style=editorial] .hero-art figcaption{justify-content:flex-end}
+  [data-style=editorial] .section-heading{padding-top:20px}
+  [data-style=editorial] .section-heading h2{font-size:36px}
+  [data-style=editorial] .research-card{grid-template-columns:1fr;padding-block:24px;gap:20px}
+  [data-style=editorial] .research-image{height:165px}
+  [data-style=editorial] .research-card h3{font-size:30px}
+  [data-style=editorial] .research-card p:not(.eyebrow){font-size:12px}
+  [data-style=editorial] .people-feature-grid{grid-template-columns:1fr}
+  [data-style=editorial] .people-feature-copy h2{font-size:36px}
+  [data-style=editorial] .contact-band h2{font-size:37px}
+  [data-style=editorial] .page-intro h1{font-size:47px;letter-spacing:-1.9px}
+  [data-style=editorial] .pi-section h2{font-size:41px}
+}
