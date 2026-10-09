@@ -1,5 +1,6 @@
 """Build the static site using only the Python standard library."""
 import html
+import hashlib
 import json
 import os
 import shutil
@@ -46,11 +47,12 @@ def footer():
 
 
 def shell(filename, title, description, content):
+    style_version = hashlib.sha256((ROOT / 'assets/styles.css').read_bytes()).hexdigest()[:12]
     document = f'''<!doctype html>
 <html lang="en" data-style="academic"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <script>try{{var s=new URLSearchParams(location.search).get('style')||localStorage.getItem('tang-lab-style');if(['academic','discovery','editorial'].includes(s))document.documentElement.dataset.style=s;}}catch(e){{}}</script>
 <title>{esc(title)} | Tang Vascular Research Lab</title><meta name="description" content="{esc(description)}"><meta name="theme-color" content="#f7f6f2">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/styles.css"><script src="assets/site.js" defer></script>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/styles.css?v={style_version}"><script src="assets/site.js" defer></script>
 </head><body id="top">{style_switcher()}{header(filename)}<main id="main" role="tabpanel" aria-labelledby="style-academic">{content}</main>{footer()}</body></html>'''
     (OUT / filename).write_text(document)
 
