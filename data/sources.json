@@ -1,0 +1,21 @@
+{
+  "checked": "2026-10-08",
+  "editorialStatus": "Local design draft. Confirm the lab name, current titles, roster, and image reuse before publication.",
+  "sources": [
+    {"url":"https://ccb.uw.edu/people/gale-tang/", "supports":"UW appointment, broad research direction, email"},
+    {"url":"https://uwsurgery.org/researchintroduction/research-investigators/investigator-profile-gale-tang/", "supports":"Research interests, named collaborators, VA affiliation; the page includes older publication and funding information."},
+    {"url":"https://iscrm.uw.edu/research/cardiovascular-system/", "supports":"Peripheral vascular disease and collateral artery research"},
+    {"url":"https://uwsurgery.org/wp-content/uploads/2017/04/Tang_Gale.jpg", "supports":"Gale Tang portrait; downloaded for this local preview. No general reuse license was identified."},
+    {"url":"https://uwsurgery.org/wp-content/uploads/2022/03/2022-schilling-abstract-booklet-final.pdf", "supports":"2022 statement locating laboratory work at UW South Lake Union and clinical work at VA Puget Sound"},
+    {"url":"https://uwsurgery.org/wp-content/uploads/images/site/about/schilling/Schilling2015AbstractBookSinglePageFINAL.pdf", "supports":"Galit Eliahoo, vascular research fellow, faculty mentor Gale L. Tang, page 28"},
+    {"url":"https://karger.com/jvr/article-pdf/63/1/29/4431173/000547829.pdf", "supports":"Former research technician Kevin Kim in acknowledgments; online 2025, issue 2026"}
+  ],
+  "notes": [
+    "No reliably attributable lab group photograph or complete current roster was found.",
+    "Hong Niu and Keisuke Kamada are documented recent coauthors; current employment and lab roles are not inferred.",
+    "The historical contributor section is not a complete alumni roster and gives no inferred employment dates.",
+    "Publication dates distinguish the 2025 online publication from the 2026 issue for the p27 aneurysm paper.",
+    "All scientific graphics are original conceptual SVG illustrations, not experimental images or anatomical reference figures.",
+    "No publication count, citation count, current grant status, open position, or unverified award is claimed."
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "name": "Tang Vascular Research Lab",
+  "email": "gtang@uw.edu",
+  "verified": "2026-10-08",
+  "profile": "https://uwsurgery.org/researchintroduction/research-investigators/investigator-profile-gale-tang/",
+  "publications": [
+    {
+      "year": 2026,
+      "type": "Preprint",
+      "topic": "Vein grafts",
+      "title": "Spatial Transcriptomics Reveals Region-Specific Remodeling in Vein Grafts After Peripheral Arterial Bypass",
+      "authors": "Kamada K, Niu H, Kikuchi S, Azuma N, Tang GL.",
+      "journal": "bioRxiv · Posted June 11, 2026 · Not peer reviewed",
+      "url": "https://www.biorxiv.org/content/10.64898/2026.06.08.731009v1",
+      "doi": "10.64898/2026.06.08.731009",
+      "summary": "A spatial view of layer-specific changes in human vein graft remodeling."
+    },
+    {
+      "year": 2026,
+      "type": "Research article",
+      "topic": "Vascular remodeling",
+      "title": "Comparison between vascular smooth muscle cells isolated from descending thoracic and abdominal aortas of mice in cell function, phenotype features, and gene expression",
+      "authors": "Kamada K, Niu H, Zhang F, Tang GL.",
+      "journal": "JVS–Vascular Science · 7:100411",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12994084/",
+      "doi": "10.1016/j.jvssci.2026.100411",
+      "summary": "Examining how the anatomical origin of vascular smooth muscle cells relates to their biology."
+    },
+    {
+      "year": 2026,
+      "type": "Methods",
+      "topic": "Spatial biology",
+      "title": "Calcified Artery Preparation and Processing with Preserved Morphology and RNA for Digital Spatial Profiling",
+      "authors": "Niu H, Kamada K, Beirne E, Tang GL.",
+      "journal": "Journal of Visualized Experiments · Issue 227",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41662190/",
+      "doi": "10.3791/69159",
+      "summary": "A tissue preparation workflow for spatial profiling of diseased human tibial arteries."
+    },
+    {
+      "year": 2025,
+      "type": "Research article",
+      "topic": "Vascular remodeling",
+      "title": "Deficiency of p27kip1, a Cyclin-Dependent Kinase Inhibitor, Accelerates Topical Elastase/3-Aminopropionitrile Fumarate Salt-Induced Abdominal Aortic Aneurysm Development in Mice",
+      "authors": "Kamada K, Niu H, Kikuchi S, Azuma N, Tang GL.",
+      "journal": "Journal of Vascular Research · Online 2025; 2026 volume 63:29–41",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12511535/",
+      "doi": "10.1159/000547829",
+      "summary": "Investigating the role of p27 in aneurysm growth, inflammation, and vessel-wall integrity."
+    },
+    {
+      "year": 2018,
+      "type": "Research article",
+      "topic": "Vein grafts",
+      "title": "Clinical factors that influence the cellular responses of saphenous veins used for arterial bypass",
+      "authors": "Sobel M, Kikuchi S, Chen L, Tang GL, Wight TN, Kenagy RD.",
+      "journal": "Journal of Vascular Surgery · 68(6S):165S–176S.e6",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29914830/",
+      "doi": "10.1016/j.jvs.2018.03.436",
+      "summary": "Connecting patient characteristics with the cellular behavior of veins used in bypass surgery."
+    },
+    {
+      "year": 2018,
+      "type": "Research article",
+      "topic": "Vein grafts",
+      "title": "Smooth muscle cells of human veins show an increased response to injury at valve sites",
+      "authors": "Kikuchi S, Chen L, Xiong K, Saito Y, Azuma N, Tang G, Sobel M, Wight TN, Kenagy RD.",
+      "journal": "Journal of Vascular Surgery · 67(5):1556–1570.e9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28647196/",
+      "doi": "10.1016/j.jvs.2017.03.447",
+      "summary": "Studying regional differences in how human venous smooth muscle cells respond to injury."
+    },
+    {
+      "year": 2016,
+      "type": "Research article",
+      "topic": "Arteriogenesis",
+      "title": "p27(kip1) Knockout enhances collateralization in response to hindlimb ischemia",
+      "authors": "Ankri-Eliahoo G, Weitz K, Cox TC, Tang GL.",
+      "journal": "Journal of Vascular Surgery · 63(5):1351–1359",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25701497/",
+      "doi": "10.1016/j.jvs.2014.12.047",
+      "summary": "Exploring the molecular regulation of collateral vessel growth after ischemia."
+    },
+    {
+      "year": 2015,
+      "type": "Research article",
+      "topic": "Arteriogenesis",
+      "title": "Impaired arteriogenesis in syndecan-1(-/-) mice",
+      "authors": "Tang GL, Weitz K.",
+      "journal": "Journal of Surgical Research · 193(1):22–27",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25194470/",
+      "doi": "10.1016/j.jss.2014.08.002",
+      "summary": "Investigating syndecan-1 in the development of collateral arteries."
+    }
+  ],
+  "collaborators": [
+    {"name": "Richard D. Kenagy", "degree": "PhD", "affiliation": "University of Washington", "field": "Vascular cell biology"},
+    {"name": "Dana Dabiri", "degree": "PhD", "affiliation": "UW Aeronautics & Astronautics", "field": "Engineering collaboration"},
+    {"name": "Ying Zheng", "degree": "PhD", "affiliation": "UW Bioengineering", "field": "Bioengineering collaboration"}
+  ],
+  "historicalContributors": [
+    {
+      "name": "Galit Ankri-Eliahoo",
+      "role": "Vascular research fellow",
+      "context": "The 2015 UW Schilling program lists Galit Eliahoo, PhD, as a vascular research fellow mentored by Gale L. Tang. Published work appears under the name Galit Ankri-Eliahoo.",
+      "sourceLabel": "2015 UW research program",
+      "source": "https://uwsurgery.org/wp-content/uploads/images/site/about/schilling/Schilling2015AbstractBookSinglePageFINAL.pdf"
+    },
+    {
+      "name": "Kevin Kim",
+      "role": "Former research technician",
+      "context": "Acknowledged for experimental assistance as a former research technician in the p27 and abdominal aortic aneurysm study published online in 2025.",
+      "sourceLabel": "Article acknowledgments",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12511535/"
+    }
+  ]
+}
