@@ -1,4 +1,4 @@
-TANG VASCULAR RESEARCH LAB — LOCAL WEBSITE
+TANG’S LAB — LOCAL WEBSITE
 
 Build:
   python3 build.py
@@ -33,7 +33,7 @@ Pushing the main branch automatically builds and publishes the site using
 .github/workflows/pages.yml. Only public/ is uploaded as the website artifact.
 The generated public/ directory is not committed to the source repository.
 
-The lab name is provisional. Current membership must be supplied by the lab.
+The lab name is Tang’s Lab. Current membership must be supplied by the lab.
 The UW portrait is an older public profile image with its source credited.
 Replace it with a lab-provided current image before the final launch.
 The historical contributors are clearly separated from the current PI and from
